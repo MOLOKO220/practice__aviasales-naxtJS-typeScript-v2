@@ -1,0 +1,235 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+body {
+  background: rgb(236, 236, 248);
+}
+.aviasales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .aviasales__logo {
+    margin-top: 50px;
+  }
+  .aviasales__section {
+    width: 98vw;
+    max-width: 754px;
+    display: flex;
+    justify-content: space-between;
+    .aviasales__section__transplant-filter {
+      width: 232px;
+      height: 302px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+      h5 {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #4a4a4a;
+      }
+      > li {
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+        label {
+          width: 232px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          transition: 300ms;
+          cursor: pointer;
+          position: relative;
+          &:hover {
+            background: #f1fcff;
+          }
+          > span {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            color: #4a4a4a;
+            margin-left: 50px;
+          }
+          > input {
+            height: 0px;
+            width: 0px;
+            &::before {
+              content: "";
+              min-width: 20px;
+              min-height: 20px;
+              width: 20px;
+              height: 20px;
+              border: solid 1px #2196f3;
+              position: absolute;
+              border-radius: 3px;
+              top: 10px;
+              left: 25px;
+            }
+            &::after {
+              content: "";
+              min-width: 20px;
+              min-height: 20px;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              top: 10px;
+              left: 25px;
+              background: url("/v.svg") no-repeat 4px 6px;
+              display: none;
+            }
+            &:checked {
+              &::after {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      > div {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        width: 100%;
+        min-height: 20px;
+        background: #2196f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: 300ms;
+        margin-top: 10px;
+        &:hover {
+          background: #a1cff6;
+          color: rgb(161, 160, 160);
+          transform: scale(1.1);
+        }
+        &:active {
+          background: #1c8ef2;
+          transform: scale(1);
+          color: white;
+        }
+      }
+    }
+    .aviasales__section__main {
+      width: 90vw;
+      max-width: 502px;
+      margin-bottom: 20px;
+
+      > button {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: #2196f3;
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+        transition: 300ms;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.Ticket {
+  max-width: 502px;
+  min-height: 176px;
+  width: 98vw;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: #2196f3;
+    }
+  }
+  main {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Ticket__time {
+      font-weight: 700;
+      font-size: 25px;
+      font-family: "Open Sans";
+    }
+    .Ticket__place {
+      font-weight: 500;
+      font-size: 14px;
+      font-family: "Open Sans";
+      margin: 5px 0;
+    }
+    .Ticket__data {
+      font-family: "Open Sans";
+      font-weight: 300;
+      font-size: 12px;
+    }
+    .Ticket__stops {
+      font-family: "Open Sans";
+      font-weight: 3500;
+      font-size: 15px;
+      border-bottom: solid 2px rgb(187, 186, 186);
+      text-align: center;
+      height: 30px;
+      width: 180px;
+      padding: 5px;
+      color: gray;
+    }
+  }
+}
